@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TileClicker</title>
+</head>
+<body>
+    <div class="control_panel" style="justify-content: space-between;">
+        <p class="title">TileClicker</p>
+        <div>
+            <button class="btn" onclick="changeTheme()"><img src="./palette.png" alt="Color"></button>
+            <button class="btn" onclick="showInfo()"><img src="./help.png" alt="Help"></button>
+        </div>
+    </div>
+    <div class="main_window">
+        <div class="control_panel">
+            <div class="stat_wrapper">
+                <p class="stat_name">SCORE</p>
+                <div class="stat" id="score"></div>
+            </div>
+            <div class="stat_wrapper">
+                <p class="stat_name">TIME</p>
+                <div class = "stat" id="time"></div>
+            </div>
+        </div>
+        <div class="game_grid" ondragstart="return false;" ondrop="return false;">
+            <div id="0" class="tile" onclick="changeColor(0)"></div>
+            <div id="1" class="tile" onclick="changeColor(1)"></div>
+            <div id="2" class="tile" onclick="changeColor(2)"></div>
+            <div id="3" class="tile" onclick="changeColor(3)"></div>
+            <div id="4" class="tile" onclick="changeColor(4)"></div>
+            <div id="5" class="tile" onclick="changeColor(5)"></div>
+            <div id="6" class="tile" onclick="changeColor(6)"></div>
+            <div id="7" class="tile" onclick="changeColor(7)"></div>
+            <div id="8" class="tile" onclick="changeColor(8)"></div>
+        </div>
+        <div class="control_panel" style="justify-content: space-evenly;">
+            <button class="btn">Top Score<p class="small-txt" id="top" style="font-size: 10px;">top</p></button>
+            <button class="btn" onclick="initGame()">Reset</button>
+            <button class="btn" onclick="changeDifficulty()">Difficulty<p id="diff" class="small-txt"></p></button>
+        </div>
+    </div>
+    <div class="popup" id="gameover">
+        <p>Game Over!</p>
+    </div>
+    <div class="popup" id="info">
+        <button class="exit btn" onclick="hideInfo()"><img src="./exit.png" alt="close"></button>
+        <p>Rules</p>
+        <hr style="width: 100%">
+        <p>
+            <ul>
+                <li>Tap the black tiles.</li>
+                <li>Don't tap the white tiles.</li>
+            </ul>
+            <br>
+            That's it. After several tiles you get additional time.<br><br>
+            You might also get a bonus round - just tap all the black tiles then!<br><br>
+            Have Fun!
+        </p>
+        <hr style="width: 100%">
+        <div class="control_panel" id="info-icons">
+            <button class="btn txt-icon" onclick="goToLink('https://github.com/vroniu')"><p>Made by vroniu</p><img src="./github.png" alt="GitHub"></button>
+            <button class="btn txt-icon" onclick="goToLink('https://www.flaticon.com')"><p>Icons from FlatIcon</p><img src="./flaticon.png" alt="FlatIcon"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

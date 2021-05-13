@@ -1,0 +1,217 @@
+:root {
+    --light-green: #bef67a;
+    --normal-green: #8bc34a;
+    --dark-green:  #5a9216;
+    
+}
+
+body {
+    background-color: var(--normal-green);
+    color: white;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+a:visited {
+    color: white;
+}
+
+ul .ordered{
+    list-style-type: disc;
+}
+
+/* Stars */
+
+.fa-star{
+    color: gray;
+}
+
+.checked {
+    color: white;
+}
+
+.rating-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill{
+    text-align: left;
+}
+
+/* Columns */
+
+.column-holder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.column {
+    display: grid;
+    position: relative;
+
+    overflow: hidden; /* no overflow*/
+    height: 100%;   /* fill entire column holder */
+    width: auto;
+
+    /* Center stuff */
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-items: center;
+
+    transition: all .1s linear;
+}
+
+/* Column hovering */
+
+.column:hover {
+    background-color: var(--dark-green);
+}
+
+.column:hover > .column-bg {
+    opacity: 0.8;
+    height: 110%;
+}
+
+.column:hover > .column-title {
+    font-size: 110%;
+    transition: inherit;
+}
+
+/* Column content */
+
+.column h1 {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    /* Bolder font */
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 1;
+    /* To make it on top */
+    position: relative;
+    z-index: 1;
+}
+
+.column h2 {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    font-size: 25px;
+    /* To make it on top */
+    position: relative;
+    z-index: 1;
+}
+
+.column-bg {
+    position: absolute;
+    width: auto;
+    height: 100%;
+
+    opacity: 0.4;
+    transition: inherit;
+}
+
+/* Page container */
+
+.page-cointainer {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.back-button {
+    position: fixed;
+    width: 12.5%;
+    background-color: var(--dark-green);
+}
+
+.back-button:hover {
+    background-color: #3a5e0e;
+}
+
+/* Text on page */
+
+.outlined {
+    color: white;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  }
+
+.text {
+    padding: 20px;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+.text h1 {
+    margin: 10px 10px 10px 0px;
+    /* Bolder font */
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.footer {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 1.5vh;
+}
+
+/* Mobile stuff */
+
+@media screen and (max-width:1300px){
+    body {
+        font-size: 35px;
+    }
+
+    .footer {
+        font-size: 15px;
+    }
+
+    .column h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:640px){
+    body {
+        font-size: 30px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+    .column h2 {
+        font-size: 15px;
+    }
+
+    .column-holder {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .scalable {
+        grid-template-rows: repeat(4, minmax(1fr, auto));
+        grid-template-columns: 1fr;
+    }
+
+    .column-bg {
+        width: 100%;
+        height: auto;
+    }
+
+    .column:hover > .column-bg {
+        opacity: 0.8;
+        width: 110%;
+        height: auto;
+    }
+    
+}

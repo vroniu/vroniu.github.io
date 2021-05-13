@@ -1,0 +1,137 @@
+:root{
+    --b-bg: #000051;
+    --m-bg: #0095a8;
+    --p-bg: #ee82ee;
+    --btn: #ff8c00;
+    --brd: #4a0072;
+    --p-brd: #808080;
+}
+
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+    font-size: 30px;
+    background-color: var(--b-bg);
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+}
+
+.main_window {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--brd);
+    background-color: var(--m-bg);
+    border-radius: 10px;
+}
+
+.control_panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.stat_wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--btn);
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.stat_name{
+    font-size: 10px;
+}
+
+.game_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    grid-gap: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tile {
+    background-color: black;
+    transition: all linear 0.1s;
+}
+
+.btn {
+    background-color: var(--btn);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+}
+
+#time {
+    transition: color linear 1s;
+}
+
+.popup{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 320px;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    background-color: var(--p-bg);
+    text-align: center;
+    border-radius: 10px;
+    border: solid var(--p-brd) 3px;
+    padding: 20px;
+    transition: all ease-out 0.2s;
+}
+
+#info {
+    font-size: 20px;
+}
+
+#info-icons {
+    justify-content: stretch;
+    width: 100%;
+    padding: 5px;
+}
+
+#info-icons > button {
+    flex: 1;
+    margin: 5px;
+}
+
+#gameover{
+    padding: 40px 20px 40px 20px;
+}
+
+.small-txt {
+    font-size: 10px;
+}
+
+.title {
+    font-size: 30px;
+    color: white;
+}
+
+.txt-icon {
+    display: flex;
+}
+
+.txt-icon > img {
+    height: 100%;
+    width: auto;
+    max-height: 32px;
+}
+
+.exit {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    padding: 5px 5px 2px 5px;
+}
