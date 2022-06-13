@@ -2,7 +2,7 @@
     --light-green: #bef67a;
     --normal-green: #8bc34a;
     --dark-green:  #5a9216;
-    
+
 }
 
 body {
@@ -36,9 +36,27 @@ ul .ordered{
     color: white;
 }
 
-.rating-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.background-rectangle {
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.icons-rectangle {
+    padding: 0.1em;
+    text-align: start !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .skill{
@@ -101,7 +119,7 @@ ul .ordered{
 }
 
 .column h2 {
-    text-align: center;
+    text-align: justify;
     margin: 10px 10px 10px 10px;
     font-size: 25px;
     /* To make it on top */
@@ -165,7 +183,7 @@ ul .ordered{
 
 /* Mobile stuff */
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1450px){
     body {
         font-size: 35px;
     }
@@ -206,6 +224,11 @@ ul .ordered{
     .column-bg {
         width: 100%;
         height: auto;
+    }
+
+    .no-rescale {
+        width: auto !important;
+        height: 100% !important;
     }
 
     .column:hover > .column-bg {
